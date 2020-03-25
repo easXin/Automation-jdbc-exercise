@@ -12,7 +12,7 @@ import org.apache.log4j.BasicConfigurator;
 import org.junit.jupiter.api.Assertions;
 
 public class MySqlTest {
-	private static Pattern reg_Num = Pattern.compile("^[-+]?[0-9]*\\.?[0-9]+$");
+	private static Pattern reg_Num = null;
 	static Integer id;
 	static Long yearOfEnrollmentLong;
 	static String fName, mName, lName, borough, region, phoneNum, gender;
@@ -26,7 +26,6 @@ public class MySqlTest {
 		String username = "user";
 		String password = "password";
 		reg_Num = Pattern.compile("^[-+]?[0-9]*\\.?[0-9]+$");
-		// student info
 	
 		try {
 			con = DriverManager.getConnection(url, username, password);
